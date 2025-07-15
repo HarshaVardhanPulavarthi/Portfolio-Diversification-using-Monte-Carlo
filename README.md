@@ -115,6 +115,61 @@ Automate comparison of different methods to find the most realistic simulation.
 | **Max Drawdown** | Maximum loss from peak |
 
 ---
+## Possible Improvements
+
+Here are some ways to enhance and extend the current project:
+
+### 1. Time-Varying Volatility Models
+- Implement **GARCH models** or **Exponentially Weighted Moving Average (EWMA)** for dynamic volatility estimation.
+- This will better capture volatility clustering in financial time series.
+
+### 2. Incorporate Transaction Costs
+- Add realistic assumptions like:
+  - **Slippage**
+  - **Bid-Ask Spread**
+  - **Brokerage Fees**
+- This will make the simulated returns more aligned with real-world trading conditions.
+
+### 3. Bootstrapping Historical Returns
+- Use **bootstrapping** (resampling past returns) to simulate potential market conditions.
+- Helps capture **fat tails** and rare events missed by standard Monte Carlo.
+
+### 4. Multi-Asset Class Support
+- Expand the portfolio beyond stocks to include:
+  - **Bonds**
+  - **Commodities**
+  - **Cryptocurrencies**
+  - **ETFs**
+- Allows for better diversification analysis.
+
+### 5. Parallelization & Performance Optimization
+- Use **multiprocessing** or **GPU acceleration** to speed up Monte Carlo simulations.
+- Especially useful for large N (portfolios) and M (simulations).
+
+### 6. Portfolio Rebalancing
+- Implement periodic **rebalancing logic** (e.g., monthly or quarterly).
+- Analyze how rebalancing affects returns, risk, and transaction costs.
+
+### 7. Interactive Web Dashboard
+- Build a web-based dashboard using:
+  - **Streamlit**
+  - **Dash**
+- Enables real-time simulations, visualizations, and portfolio adjustments via a GUI.
+
+### 8. Scenario Analysis & Stress Testing
+- Simulate specific market shocks (e.g., COVID crash, 2008 crisis scenarios).
+- Assess how different portfolios react under extreme conditions.
+
+### 9. Integration with Optimization Libraries
+- Use **cvxpy**, **scipy.optimize**, or **PyPortfolioOpt** to find mathematically optimal solutions alongside random sampling.
+
+### 10. Reporting & PDF Generation
+- Automatically generate PDF reports summarizing:
+  - Portfolio allocation
+  - Simulated performance
+  - Risk metrics
+  - Comparison charts
+
 
 ## Usage
 
